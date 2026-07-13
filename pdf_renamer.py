@@ -119,16 +119,17 @@ class PDFRenamerGUI:
         
         # Definisci le colonne
         self.tree.column("#0", width=0, stretch=tk.NO)
-        self.tree.column("num", anchor=tk.CENTER, width=40, heading="N.")
-        self.tree.column("old_name", anchor=tk.W, width=250, heading="Nome Originale")
-        self.tree.column("new_name", anchor=tk.W, width=200, heading="Nuovo Nome")
-        self.tree.column("folder", anchor=tk.W, width=200, heading="Cartella")
+        self.tree.column("num", anchor=tk.CENTER, width=40)
+        self.tree.column("old_name", anchor=tk.W, width=250)
+        self.tree.column("new_name", anchor=tk.W, width=200)
+        self.tree.column("folder", anchor=tk.W, width=200)
         
-        self.tree.heading("#0", text="", anchor=tk.W)
-        self.tree.heading("num", text="N.", anchor=tk.CENTER)
-        self.tree.heading("old_name", text="Nome Originale", anchor=tk.W)
-        self.tree.heading("new_name", text="Nuovo Nome", anchor=tk.W)
-        self.tree.heading("folder", text="Cartella", anchor=tk.W)
+        # Definisci gli heading
+        self.tree.heading("#0", text="")
+        self.tree.heading("num", text="N.")
+        self.tree.heading("old_name", text="Nome Originale")
+        self.tree.heading("new_name", text="Nuovo Nome")
+        self.tree.heading("folder", text="Cartella")
         
         self.tree.pack(fill=tk.BOTH, expand=True)
         
